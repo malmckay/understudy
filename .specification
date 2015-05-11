@@ -1,0 +1,70 @@
+--- !ruby/object:Gem::Specification
+name: understudy
+version: !ruby/object:Gem::Version
+  version: 0.0.1
+  segments:
+  - 0
+  - 0
+  - 1
+  hash: 1305763989104274018
+  prerelease: 
+platform: ruby
+authors:
+- Mal McKay
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2013-08-01 00:00:00.000000000 Z
+dependencies: []
+description: Understudy runs new code alongside old code, and logs any differences.
+email: mal@mcommons.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- .specification
+- Rakefile
+- init.rb
+- lib/understudy.rb
+- lib/understudy_log_recorder.rb
+- lib/understudy_recorder.rb
+- lib/understudy_statsd_recorder.rb
+- spec/spec.opts
+- spec/spec_helper.rb
+- spec/understudy_spec.rb
+- understudy.gemspec
+homepage: http://github.com/mcommons/understudy
+licenses: []
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+      segments:
+      - 0
+      hash: 4411104597088319108
+required_rubygems_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+      segments:
+      - 0
+      hash: 4411104597088319108
+requirements: []
+rubyforge_project: 
+rubygems_version: 1.8.25
+signing_key: 
+specification_version: 3
+summary: A means to tryout new code without side effects
+test_files:
+- spec/spec.opts
+- spec/spec_helper.rb
+- spec/understudy_spec.rb
+

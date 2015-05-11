@@ -62,3 +62,30 @@ Understudy.new(TextCleaner, FasterTextCleaner, :transliterate]) do |old_result, 
 end
 
 ```
+
+## Shim
+
+Understudy includes a helper to shim a new class to act like your current class. This is useful when changing gems, and the new gem uses different method names.
+
+
+``` ruby
+# ./config/initializers/text_cleaning.rb
+require 'understudy/shim'
+
+class TextScrubber
+  def scrub!
+    # translate unicode to ascii
+  end
+end
+
+class TextCleaner
+  def transliterate
+    # translate unicode to ascii
+  end
+end
+
+Shim.new(TextScrubber, deprecate=false, :transliterate => :scrub!)
+Understudy.new(TextCleaner, TextScrubber, :transliterate)
+
+
+```
